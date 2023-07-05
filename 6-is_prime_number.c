@@ -23,11 +23,11 @@ int checker(int n, int i)
 }
 
 /**
- *  * is_prime_number - checker for prime number
- *   * @n: number to checker
- *    *
- *     * Return: 1 if true else 0
- *      */
+ *is_prime_number - checker for prime number
+ *@n: number to checker
+ *
+ *Return: 1 if true else 0
+ */
 
 int is_prime_number(int n)
 {
