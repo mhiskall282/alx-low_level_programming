@@ -1,9 +1,9 @@
-#include <stdio.h>
+include <stdio.h>
 #include "main.h"
 /**
- * *main - print number of argument passed
+ * main - print number of argument passed
  * @argc: int argument
- * @argv; string pointer
+ * @argv: string pointer
  *
  * Return: 0;
  */
