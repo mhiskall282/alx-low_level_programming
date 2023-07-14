@@ -1,35 +1,50 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 /**
- * array_range - create array of int
- * @min: lower point
- * @max: limit
+ * _memset - copy files by constant
+ * @s: variable to store
+ * @b: variable to be copyed
+ * @n: constant
  *
- * Return: array else NULL
+ * Return: s
  */
 
-int *array_range(int min, int max)
+char *_memset(char *s, char b, unsigned int n)
 {
-	int *arr, i, len;
+	unsigned int i;
 
-	if (min > max)
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+
+	return (s);
+}
+
+/**
+ * _calloc - allocate memory for array
+ * @nmemb: size of array
+ * @size: of element
+ *
+ * Return: new memory else NULL
+ */
+
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	char *mem;
+
+	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	len = max - min + 1;
 
-	arr = malloc(sizeof(int) * len);
-
-	if (arr == NULL)
+	mem = malloc(nmemb * size);
+	if (mem == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; min <= max; i++)
-	{
-		arr[i] = min;
-		min++;
-	}
+	_memset(mem, 0, nmemb * size);
 
-	return (arr);
+	return (mem);
 }
